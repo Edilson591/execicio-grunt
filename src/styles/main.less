@@ -1,0 +1,87 @@
+@fontePrincipal: Roboto, sans-serif;
+@fonteDoTitulo: Lobster, cursive;
+@corTexto: #0c0808;
+@corDeFundo: #786fa6;
+@corDeFundoHeader: #574b90;
+@corDeFundoButton: #546de5;
+@corDeFundoButtonHover: #778beb;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: @fontePrincipal;
+}
+body {
+    background-color: @corDeFundo;
+    color: @corTexto;
+}
+
+header {
+    padding: 20px;
+    background-color: @corDeFundoHeader;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+button {
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    color: @corTexto;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: @corDeFundoButton;
+    margin-left: 1rem;
+    transition: all ease .5s;
+    &:hover {
+        background-color: @corDeFundoButtonHover;
+        transform: scale(1.1);
+    }
+}
+
+.container-input {
+    display: flex;
+    width: 300px;
+}
+
+input {
+    padding: 16px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+main {
+    .container {
+        margin: 0 auto;
+        width: 80%;
+    }
+    .list-search {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        padding: 80px 0;
+        .img-wrapper {
+            overflow: hidden;
+            max-width: 400px;
+            max-height: 200px;
+            background-size: cover;
+            background-position: center;
+            &:hover {
+                overflow: auto;
+                transform: scale(1.3);
+            }
+            img {
+                width: 100%;
+             }
+        }
+    }
+}
